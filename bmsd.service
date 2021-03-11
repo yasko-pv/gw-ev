@@ -1,0 +1,11 @@
+[Unit]
+Description= bms deamon for battery
+After=network-online.target
+
+[Service]
+ExecStart=/home/pi/gw-ev/gw-ev
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
