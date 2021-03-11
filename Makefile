@@ -13,7 +13,7 @@ $(EXEC): $(OBJS)
 	
 
 restart: all
-	systemctl restart $(EXEC)
+	systemctl restart bmsd
 clean:
 	-rm -f  *.elf *.gdb *.o
 
