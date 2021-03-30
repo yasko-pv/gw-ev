@@ -60,6 +60,7 @@
 #define ICHG            10.0F
 #define IDIS            25.0F
 #define SOH		85.0F
+#define NPACKS		7
 
 #define VMAX_CHG	(TOTAL_CELL-NSKIP)*MAX_CHG_V
 #define VMAX_SOC	(TOTAL_CELL-NSKIP)*MAX_SOC_V
@@ -410,8 +411,8 @@ void init_frames()
 {
 	frame[F_STR].can_id  = frame_id[F_STR];
         frame[F_STR].can_dlc = 8;
-        frame[F_STR].data[0] = 'D';
-        frame[F_STR].data[1] = 'F';
+        frame[F_STR].data[0] = NPACKS;
+        frame[F_STR].data[1] = 0;
 
 	frame[F_ALARM].can_id  = frame_id[F_ALARM];
         frame[F_ALARM].can_dlc = 8;
